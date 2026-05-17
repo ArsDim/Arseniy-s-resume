@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 | Сторінку не знайдено</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .error-wrapper {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .error-code {
+            font-size: clamp(80px, 15vw, 120px);
+            color: var(--accent-green);
+            font-weight: 600;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="header-text">
+            <p class="role-title">System Message</p>
+            <h1>Помилка доступу</h1>
+        </div>
+    </header>
+
+    <div class="error-wrapper">
+        <h2 class="error-code">404</h2>
+        <p class="about-text" style="max-width: 500px;">
+            Здається, ви потрапили в тупикову гілку коду. Сторінка, яку ви шукаєте, не існує або була перенесена в інший репозиторій.
+        </p>
+        
+        <a href="index.html" class="list-item" style="text-decoration: none; color: var(--accent-green); margin-top: 40px; border: 1px solid var(--accent-green); padding: 15px 30px; border-radius: 4px;">
+            <span>ПОВЕРНУТИСЯ НА ГОЛОВНУ</span>
+        </a>
+    </div>
+
+    <footer>
+        <p class="footer-sub">Виникли технічні труднощі?</p>
+        <h2 class="footer-cta">Повідомте мені</h2>
+        <a href="mailto:surikatihatima@gmail.com" class="email-link">surikatihatima@gmail.com</a>
+    </footer>
+</div>
+
+</body>
+</html>

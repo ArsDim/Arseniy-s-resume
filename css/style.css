@@ -1,0 +1,333 @@
+:root {
+    --bg-color: #000000;
+    --text-main: #ffffff;
+    --text-dim: #888888;
+    --accent-green: #d4ff3f;
+    --border-color: #222222;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    padding: 0 40px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    margin-bottom: 100px;
+}
+
+.profile-img-wrapper {
+    width: 180px;
+    height: 220px;
+    background-color: #111;
+    overflow: hidden;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.1);
+    transition: filter 0.3s ease;
+}
+
+.profile-img:hover {
+    filter: grayscale(0%) contrast(1);
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.role-title {
+    color: var(--text-dim);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.header-text h1 {
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+/* Grid Layouts */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 120px;
+    margin-bottom: 100px;
+}
+
+.grid-col {
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--accent-green);
+    margin-bottom: 24px;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+/* List Items */
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding: 16px 0;
+    font-size: 14px;
+}
+
+.list-item:last-of-type {
+    border-bottom: none;
+}
+
+.item-title {
+    font-weight: 400;
+}
+
+.dim {
+    color: var(--text-dim);
+}
+
+/* About Section */
+.about-text {
+    font-size: 18px;
+    font-weight: 300;
+    color: #cccccc;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Works Section */
+.works-section {
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 32px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-img-wrapper {
+    width: 100%;
+    overflow: hidden;
+    background: #111;
+}
+
+.project-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none; /* Прибираємо підкреслення тексту */
+    color: inherit;       /* Наслідуємо білий колір тексту */
+    cursor: pointer;
+}
+
+.project-card:hover .project-img-wrapper img {
+    transform: scale(1.03);
+    filter: grayscale(0%);
+    transition: 0.5s ease;
+}
+
+.project-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.project-name {
+    font-weight: 500;
+}
+
+.year-tag {
+    background: #161616;
+    color: var(--text-dim);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+/* Footer Section */
+footer {
+    border-top: 1px solid var(--border-color);
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+.footer-sub {
+    color: var(--accent-green);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.footer-cta {
+    font-size: 56px;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+    margin-bottom: 16px;
+}
+
+.email-link {
+    font-size: 64px;
+    font-weight: 300;
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    word-break: break-all;
+}
+
+.email-link:hover {
+    color: var(--text-main);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 900px) {
+    body {
+        padding: 0 24px;
+    }
+    
+    .container {
+        padding: 48px 0;
+    }
+    
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        margin-bottom: 64px;
+    }
+    
+    .header-text h1 {
+        font-size: 48px;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 64px;
+        margin-bottom: 64px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .footer-cta {
+        font-size: 40px;
+    }
+    
+    .email-link {
+        font-size: 36px;
+    }
+}
+
+/* Додай це або онови існуючі класи в своєму CSS */
+
+.about-text {
+    font-size: 18px;
+    font-weight: 300;
+    color: #cccccc;
+    line-height: 1.7;
+    text-align: left; /* Краще для читання українською */
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 0; /* Трохи компактніше */
+    font-size: 14px;
+}
+
+.list-item span:first-child {
+    font-weight: 400;
+}
+
+.dim {
+    color: var(--text-dim);
+    font-size: 12px;
+}
+
+/* Якщо проектів 3, можна зробити їх сітку більш гнучкою */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 32px;
+}
+
+footer {
+    border-top: 1px solid var(--border-color);
+    padding-top: 80px;
+    padding-bottom: 120px;
+    margin-top: 100px;
+}
+
+.error-wrapper {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.error-code {
+    font-size: clamp(80px, 15vw, 120px);
+    color: var(--accent-green);
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 20px;
+}
