@@ -13,16 +13,25 @@
 
 <div class="container">
     <header>
-        <div class="profile-img-wrapper">
-            <img src="img/me.png" alt="Арсеній Димчак">
+        <div class="header-main-info">
+            <div class="profile-img-wrapper">
+                <img src="img/me.png" alt="Арсеній Димчак" class="profile-img">
+            </div>
+            <div class="header-text">
+                <p class="role-title">Frontend Developer (JS)</p>
+                <h1>Арсеній Димчак</h1>
+            </div>
         </div>
-        <div class="header-text">
-            <p class="role-title">Frontend Developer (JS)</p>
-            <h1>Арсеній Димчак</h1>
-        </div>
+        
+        <nav class="nav-menu">
+            <a href="#about" class="nav-link">Про мене</a>
+            <a href="#experience" class="nav-link">Досвід та освіта</a>
+            <a href="#projects" class="nav-link">Проєкти</a>
+            <a href="#contacts" class="nav-link">Контакти</a>
+        </nav>
     </header>
 
-    <div class="info-grid">
+    <div class="info-grid" id="about">
         <div class="grid-col">
             <h3><span class="icon">✦</span> Хто я</h3>
             <p class="about-text">
@@ -33,18 +42,18 @@
         <div class="grid-col">
             <h3><span class="icon">✦</span> Основні навички</h3>
             <div class="list-item"><span>HTML5 & Semantic UI</span></div>
-            <div class="list-item"><span>CSS3 (Grid, Flexbox, Animation)</span></div>
-            <div class="list-item"><span>JavaScript (DOM, Async/Await, ES6+)</span></div>
+            <div class="list-item"><span>CSS3</span></div>
+            <div class="list-item"><span>JavaScript</span></div>
             <div class="list-item"><span>Responsive & Adaptive Design</span></div>
-            <div class="list-item"><span>Git & GitHub</span></div>
+            <div class="list-item"><span>GitHub</span></div>
         </div>
     </div>
 
-    <div class="info-grid">
+    <div class="info-grid" id="experience">
         <div class="grid-col">
             <h3><span class="icon">✦</span> Досвід роботи</h3>
             <div class="list-item">
-                <span class="item-title">Frontend Developer / Freelance</span>
+                <span class="item-title">Frontend Developer</span>
                 <span class="dim">2024 — Теперішній час</span>
             </div>
             <div class="list-item">
@@ -77,55 +86,58 @@
     <div class="info-grid">
         <div class="grid-col">
             <h3><span class="icon">✦</span> Досягнення</h3>
-            <div class="list-item"><span class="item-title">Робоча сторінка магазину</span></div>
+            <div class="list-item"><span class="item-title">Робоча сторінка магазина</span></div>
             <div class="list-item"><span class="item-title">Участь у проекті «Барбершоп»</span></div>
             <div class="list-item"><span class="item-title">Розробка навчальної гри CSS Style Logic</span></div>
         </div>
     </div>
 
-<section class="works-section">
-    <h3><span class="icon">✦</span> Вибрані проєкти</h3>
-    <div class="projects-grid">
-        
-        <a href="SL.html" class="project-card">
-            <div class="project-img-wrapper">
-                <img src="img/SL.png" alt="Style Logic">
-            </div>
-            <div class="project-info">
-                <span class="project-name">Style Logic (гра)</span>
-                <span class="year-tag">2026</span>
-            </div>
-        </a>
+    <section class="works-section" id="projects">
+        <h3><span class="icon">✦</span> Вибрані проєкти</h3>
+        <div class="projects-grid">
+            <a href="SL.html" class="project-card">
+                <div class="project-img-wrapper">
+                    <img src="img/SL.png" alt="Style Logic">
+                </div>
+                <div class="project-info">
+                    <span class="project-name">Style Logic (гра)</span>
+                    <span class="year-tag">2026</span>
+                </div>
+            </a>
+            <a href="BB.html" class="project-card">
+                <div class="project-img-wrapper">
+                    <img src="img/BB.png" alt="Барбершоп">
+                </div>
+                <div class="project-info">
+                    <span class="project-name">«Барбершоп» (макет)</span>
+                    <span class="year-tag">2026</span>
+                </div>
+            </a>
+            <a href="PT.html" class="project-card">
+                <div class="project-img-wrapper">
+                    <img src="img/PT.png" alt="PlayToy">
+                </div>
+                <div class="project-info">
+                    <span class="project-name">PlayToy (макет)</span>
+                    <span class="year-tag">2026</span>
+                </div>
+            </a>
+        </div>
+    </section>
 
-        <a href="BB.html" class="project-card">
-            <div class="project-img-wrapper">
-                <img src="img/BB.png" alt="Барбершоп">
-            </div>
-            <div class="project-info">
-                <span class="project-name">«Барбершоп» (макет)</span>
-                <span class="year-tag">2026</span>
-            </div>
-        </a>
-
-        <a href="PT.html" class="project-card">
-            <div class="project-img-wrapper">
-                <img src="img/PT.png" alt="PlayToy">
-            </div>
-            <div class="project-info">
-                <span class="project-name">PlayToy (макет)</span>
-                <span class="year-tag">2026</span>
-            </div>
-        </a>
-
-    </div>
-</section>
-
-    <footer>
-        <p class="footer-sub">КОНТАКТИ</p>
+    <footer id="contacts">
+        <p class="footer-sub">Зв'язок</p>
         <h2 class="footer-cta">Залишайтеся на зв'язку</h2>
-        <a href="mailto:surikatihatima@gmail.com" class="email-link">surikatihatima@gmail.com</a>
+        <div class="footer-links">
+            <div style="position: relative; display: inline-block;">
+                <a href="#" id="copy-email" class="email-link">surikatihatima@gmail.com</a>
+                <span id="copy-toast" class="toast-message">Скопійовано!</span>
+            </div>
+            <a href="https://t.me/temmie228" target="_blank" class="email-link">Мій телеграм</a>
+        </div>
     </footer>
 </div>
 
+<script src="main.js"></script>
 </body>
 </html>
